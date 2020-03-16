@@ -1,10 +1,12 @@
 package com.example.rentalapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -27,6 +29,15 @@ public class Navigation2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Intent intent=new  Intent(this, Gallery.class);
+        startActivity(intent);
+        Intent intent2=new  Intent(this, contactUs.class);
+        startActivity(intent);
+        Intent intent3=new  Intent(this, test.class);
+        startActivity(intent);
+        Intent intent4=new  Intent(this, locations.class);
+        startActivity(intent);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation2);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -37,8 +48,13 @@ public class Navigation2 extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+
             }
         });
+
+
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -52,6 +68,7 @@ public class Navigation2 extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

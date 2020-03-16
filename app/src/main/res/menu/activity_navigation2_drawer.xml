@@ -11,7 +11,12 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
+            android:onClick="viewgallery"
             android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/location" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
