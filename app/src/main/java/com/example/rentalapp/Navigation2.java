@@ -47,14 +47,20 @@ public class Navigation2 extends AppCompatActivity {
 
         public  void  location(View view){
 
-            Toast.makeText(this, " Am working but please put code in the Navigation2 java class  ", Toast.LENGTH_LONG).show();
+            Intent intent =new Intent(Navigation2.this, location.class);
+            startActivity(intent);
+
+            //Toast.makeText(this, " Am working but please put code in the Navigation2 java class  ", Toast.LENGTH_LONG).show();
 
 
         }
 
         public  void  testimonials(View view){
 
-            Toast.makeText(this, " Am working but please put code in the Navigation2 java class  ", Toast.LENGTH_LONG).show();
+            Intent intent =new Intent(Navigation2.this, testimonials.class);
+            startActivity(intent);
+
+            //Toast.makeText(this, " Am working but please put code in the Navigation2 java class  ", Toast.LENGTH_LONG).show();
 
 
 
@@ -62,7 +68,11 @@ public class Navigation2 extends AppCompatActivity {
 
         public  void  contactus(View view){
 
-            Toast.makeText(this, " Am working but please put code in the Navigation2 java class  ", Toast.LENGTH_LONG).show();
+            Intent intent =new Intent(Navigation2.this, contactus.class);
+            startActivity(intent);
+
+
+            // Toast.makeText(this, " Am working but please put code in the Navigation2 java class  ", Toast.LENGTH_LONG).show();
 
 
 

@@ -19,7 +19,6 @@
     <string name="menu_send">Send</string>
     <string name="our_location">Our Location</string>
     <string name="testimonials">Testimonials</string>
-    <string name="contact_us">Contact Us</string>
     <string name="communicate">Communicate</string>
     <string name="view_gallery">View Gallery</string>
 
@@ -116,6 +115,13 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="todo" />
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_your_phone_number">Enter Your Phone Number</string>
+    <string name="properties_interested_in">Properties Interested in</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="submit">Submit</string>
+    <string name="title_activity_location">Map</string>
 
 
 </resources>
