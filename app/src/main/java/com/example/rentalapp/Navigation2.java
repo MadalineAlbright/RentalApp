@@ -74,12 +74,21 @@ public class Navigation2 extends AppCompatActivity {
 
             // Toast.makeText(this, " Am working but please put code in the Navigation2 java class  ", Toast.LENGTH_LONG).show();
 
+    }
+
+    public  void  appbar(View view){
+
+        Intent intent =new Intent(Navigation2.this, appbar.class);
+        startActivity(intent);
 
 
-        }
+        // Toast.makeText(this, " Am working but please put code in the Navigation2 java class  ", Toast.LENGTH_LONG).show();
+
+    }
 
 
 
 
 
-}
+
+    }

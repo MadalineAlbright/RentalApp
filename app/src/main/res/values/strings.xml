@@ -122,6 +122,10 @@
     <string name="contact_us">Contact Us</string>
     <string name="submit">Submit</string>
     <string name="title_activity_location">Map</string>
+    <string name="aboutus">Aboutus</string>
+    <string name="share">share</string>
+    <string name="home">home</string>
+    <string name="appbar">appbar</string>
 
 
 </resources>
