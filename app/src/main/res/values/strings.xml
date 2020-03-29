@@ -126,6 +126,21 @@
     <string name="share">share</string>
     <string name="home">home</string>
     <string name="appbar">appbar</string>
+    <string name="email_address">Email Address</string>
+    <string name="registration">REGISTRATION</string>
+    <string name="Fullname">fullName</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account_login_here">Already have an account?Login here.</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+    <string name="house_edge">HOUSE EDGE</string>
+    <string name="don_t_have_an_account_register_here">Don\'t have an account?Register here.</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="new_here_create_account">New Here? Create Account.</string>
 
 
 </resources>

@@ -2,56 +2,58 @@ package com.example.rentalapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.Toast;
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class MainActivity extends AppCompatActivity {
-    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-
     }
+public void logout(View view){
+    FirebaseAuth.getInstance().signOut();
+    startActivity(new Intent(getApplicationContext().login.class));
+    finish();
+}
 
 
-    public void ButtonClick(View view) {
-        EditText et1 = (EditText) findViewById(R.id.myemail);
-        EditText et2 = (EditText) findViewById(R.id.mypass);
-
-        String email = et1.getText().toString();
-        String pass = et2.getText().toString();
-        // code that links to the database in this case we'll use one email and password.
-
-        String oemail = "maddy";
-        String opass = "maddy";
-
-        //Sets the conditions to be met
-
-        if (email.equals(oemail) && pass.equals(opass)) {
-            Intent intent = new Intent(this, Navigation2.class);
-            startActivity(intent);
-        } else {
-            Toast toast = Toast.makeText(this, "Invalid Email/Password", Toast.LENGTH_LONG);
-            toast.show();
-        }
-
-    }
+//        toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//
+//    }
+//
+//
+//    public void ButtonClick(View view) {
+//        EditText et1 = (EditText) findViewById(R.id.myemail);
+//        EditText et2 = (EditText) findViewById(R.id.mypass);
+//
+//        String email = et1.getText().toString();
+//        String pass = et2.getText().toString();
+//        // code that links to the database in this case we'll use one email and password.
+//
+//        String oemail = "maddy";
+//        String opass = "maddy";
+//
+//        //Sets the conditions to be met
+//
+//        if (email.equals(oemail) && pass.equals(opass)) {
+//            Intent intent = new Intent(this, Navigation2.class);
+//            startActivity(intent);
+//        } else {
+//            Toast toast = Toast.makeText(this, "Invalid Email/Password", Toast.LENGTH_LONG);
+//            toast.show();
+//        }
+//
+//    }
 
 
 //    @Override
