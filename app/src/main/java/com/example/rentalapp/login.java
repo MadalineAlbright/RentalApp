@@ -37,6 +37,16 @@ public class login extends AppCompatActivity {
         mLoginBtn=findViewById(R.id.loginBtn);
         mCreateBtn=findViewById(R.id.createtext);
 
+        mCreateBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(login.this,register. class));
+            }
+        });
+
+
+
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,24 +69,74 @@ public class login extends AppCompatActivity {
 
                 //authenticate the user
 
-                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(login.this,"Logged in Successfully",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext().MainActivity.class));
-                        }else
-                        {
-                            Toast.makeText(login.this,"Error!"+ task.getException().getMessage() Toast.LENGTH_SHORT).show();
+                        if (task.isSuccessful()) {
+                            Toast.makeText(login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(login.this, MainActivity.class));
+                        } else {
+                            Toast.makeText(login.this, "Error!" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
 
                         }
-            }
-        });
-                mCreateBtn.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(getApplicationContext().register.class));
                     }
                 });
+
+
+            }
+
+
+        });
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

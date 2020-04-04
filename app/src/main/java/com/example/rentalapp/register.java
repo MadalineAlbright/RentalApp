@@ -45,9 +45,17 @@ public class register extends AppCompatActivity {
        progressBar=findViewById(R.id.progressBar);
 
        if(fAuth.getCurrentUser() !=null){
-           startActivity(new Intent(getApplicationContext().MainActivity.class));
+           startActivity(new Intent(register.this,MainActivity.class));
            finish();
        }
+
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(register.this,login.class));
+            }
+        });
 
 
        mRegisterBtn.setOnClickListener(new View.OnClickListener() {
@@ -77,18 +85,22 @@ public class register extends AppCompatActivity {
                    public void onComplete(@NonNull Task<AuthResult> task) {
                        if (task.isSuccessful()) {
                            Toast.makeText(register.this, "User Created", Toast.LENGTH_SHORT).show();
-                           startActivity(new Intent(getApplicationContext().MainActivity. class));
+                           startActivity(new Intent(register.this, MainActivity.class));
                        } else {
-                           Toast.makeText(register.this, "Error!" + task.getException().getMessage()Toast.LENGTH_SHORT).show();
+                           Toast.makeText(register.this, "Error!" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
 
                        }
                    }
                });
-               mLoginButton.setOnClickListener(new View.OnClickListener() {
 
-                   @Override
-                   public void onClick(View v) {
-                       startActivity(new Intent(getApplicationContext().login.class));
-                   }
-               });
            }
+
+
+       });
+
+    }
+
+}
+
+
+
