@@ -30,7 +30,7 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mEmail = findViewById(R.id.myemail);
+      /*  mEmail = findViewById(R.id.myemail);
         mPassword= findViewById(R.id.mypass);
         progressBar=findViewById(R.id.progressBar);
         fAuth=FirebaseAuth.getInstance();
@@ -87,7 +87,7 @@ public class login extends AppCompatActivity {
 
 
         });
-
+*/
 
     }
 
